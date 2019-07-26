@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<h1>hello templates</h1>
+{#变量代码块的使用#}
+{{ url_str }}<br>
+
+{#列表的使用#}
+{{ my_list }}<br>
+{{ my_list[2] }}<br>
+{{ my_list.2 }}<br>
+
+{#字典的使用#}
+{{ my_dict }}<br>
+{{ my_dict.url }}<br>
+{{ my_dict['url'] }}<br>
+
+{{ your_int }}<br>
+
+<hr>
+{#控制代码块{% %}#}
+{#for 循环,建议先写 for，然后按住 tab 进行不全#}
+{% for num in my_list %}
+{#if判断#}
+    {% if num >2 %}
+        {{ num }} <br>
+    {% endif %}
+{% endfor %}
+
+<hr>
+{#过滤器#}
+
+{#字符串大写#}
+{{ url_str | upper }}<br>
+
+{#字符串反转#}
+{{ url_str | reverse }}<br>
+
+{#过滤器链式调用#}
+{{ url_str | reverse | upper }}<br>
+</body>
+</html>
