@@ -31,8 +31,6 @@ for i in range(len(after_sorted)):
     numb = after_sorted[i][1]
     if numb >= 10000:
         numb /= 10000
-        if numb >= 1000:
-            numb = str(numb[:1] + ',' + numb[1:])
         after_sorted[i][1] = str(numb) + '万'
 
 for count in range(len(after_sorted)):
